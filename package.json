@@ -1,7 +1,8 @@
 {
-  "name": "js-lib",
+  "name": "@teerach-min/js-lib",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "test": "jest",
     "watch": "babel src --out-dir lib --extensions '.ts,.tsx' --watch",
@@ -11,6 +12,9 @@
     "tsc": "tsc"
   },
   "repository": "https://github.com/teerach-min/js-lib.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "teerach-min <teerach.min@gmail.com>",
   "license": "MIT",
   "devDependencies": {
