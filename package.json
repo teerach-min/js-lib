@@ -1,0 +1,24 @@
+{
+  "name": "js-lib",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "babel src --out-dir lib --extensions '.ts,.tsx' --watch",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "babel src --out-dir dist/esm src --extensions '.ts,.tsx'",
+    "build:cjs": "babel src --out-dir dist src --env-name cjs --extensions '.ts,.tsx'",
+    "tsc": "tsc"
+  },
+  "repository": "https://github.com/teerach-min/js-lib.git",
+  "author": "teerach-min <teerach.min@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/node": "^7.13.0",
+    "@babel/plugin-transform-typescript": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-typescript": "^7.13.0"
+  }
+}
